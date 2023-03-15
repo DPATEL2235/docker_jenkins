@@ -6,6 +6,9 @@ pipeline{
     } 
     
     stages{
+        stage('git clone'){
+            sh 'git clone https://github.com/DPATEL2235/docker_jenkins.git'
+        }
         stage('Build an image'){
             sh 'docker build -t dhrumil2235/ubuntu_pwd .'
         }
